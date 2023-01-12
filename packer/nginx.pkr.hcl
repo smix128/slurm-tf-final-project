@@ -31,7 +31,7 @@ source "yandex" "nginx" {
 }
 
 build {
-  source = ["source.yandex.nginx"]
+  sources = ["source.yandex.nginx"]
 
   provisioner "ansible" {
     playbook_file = "playbook.yml"

@@ -1,3 +1,6 @@
 export YC_FOLDER_ID=(yc config get folder-id)
 export YC_SUBNET_ID=e9b59oe9ppsptmu7n39m
 export YC_ZONE=enpbeno0scckjlt8jaa9
+
+#packer validate nginx.pkr.hcl
+#packer build -var 'image_tag=1.0.0' nginx.pkr.hcl
