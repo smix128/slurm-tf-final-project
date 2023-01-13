@@ -1,4 +1,3 @@
-
 variable "az" {
   type = list(string)
   default = [
