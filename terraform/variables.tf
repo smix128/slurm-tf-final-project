@@ -15,3 +15,15 @@ variable "cidr_blocks" {
     ["10.10.30.0/24"]
   ]
 }
+
+variable "ig_name" {
+  type = string
+}
+
+variable "yc_folder_id" {
+  type = string
+}
+
+variable "yc_image_id" {
+  type = string
+}
