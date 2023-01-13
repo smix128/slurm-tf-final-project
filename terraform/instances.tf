@@ -1,3 +1,7 @@
+resource "yandex_compute_image" "this" {
+  name       = "nginx-1"
+}
+
 resource "yandex_compute_instance_group" "this" {
   name                = "nginx-ig"
   folder_id           = "${var.YC_FOLDER_ID}"
@@ -12,7 +16,7 @@ resource "yandex_compute_instance_group" "this" {
     boot_disk {
       mode = "READ_WRITE"
       initialize_params {
-        image_id = "${data.yandex_compute_image.nginx-1.id}"
+        image_id = "${data.yandex_compute_image.this.id}"
         size     = 4
       }
     }
