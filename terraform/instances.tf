@@ -20,10 +20,6 @@ resource "yandex_compute_instance_group" "this" {
         size     = 4
       }
     }
-    network_interface {
-      network_id = yandex_vpc_network.this.id
-      subnet_ids = yandex_vpc_subnet.this.id
-    }
     metadata = {
       ssh-keys = "yc-user:${file("~/.ssh/id_rsa.pub")}"
     }
