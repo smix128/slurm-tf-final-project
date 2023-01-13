@@ -16,7 +16,7 @@ resource "yandex_compute_instance_group" "this" {
     boot_disk {
       mode = "READ_WRITE"
       initialize_params {
-        image_id = "${yandex_compute_image.this.id}"
+        image_id = yandex_compute_image.nginx-1.id
         size     = 4
       }
     }
