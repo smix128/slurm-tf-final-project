@@ -1,7 +1,3 @@
-resource "yandex_compute_image" "nginx-1" {
-  name       = "nginx-1"
-}
-
 resource "yandex_compute_instance_group" "this" {
   name                = "nginx-ig"
   folder_id           = "b1g9uka7gvk8bkh2s9ae"
@@ -16,7 +12,7 @@ resource "yandex_compute_instance_group" "this" {
     boot_disk {
       mode = "READ_WRITE"
       initialize_params {
-        image_id = yandex_compute_image.nginx-1.id
+        image_id = "fd8m4a88dc3vgo2sofh5"
         size     = 4
       }
     }
