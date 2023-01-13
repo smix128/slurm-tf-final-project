@@ -18,7 +18,7 @@ resource "yandex_compute_instance_group" "this" {
     }
     network_interface {
       network_id = yandex_vpc_network.this.id
-      subnet_ids = ["${yandex_vpc_subnet.this.id}"]
+      subnet_ids = ["${yandex_vpc_subnet.this[each.key].id}"]
     }
     metadata = {
       ssh-keys = "yc-user:${file("~/.ssh/id_rsa.pub")}"
