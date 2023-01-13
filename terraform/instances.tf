@@ -37,7 +37,7 @@ resource "yandex_compute_instance_group" "this" {
   }
 
   application_load_balancer {
-    
+    target_group_name = "${var.ig_name}-target-group"
   }
 
   allocation_policy {
