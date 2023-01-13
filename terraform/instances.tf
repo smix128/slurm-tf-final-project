@@ -3,7 +3,9 @@ resource "yandex_compute_instance_group" "this" {
   folder_id           = "b1g9uka7gvk8bkh2s9ae"
   service_account_id  = "${yandex_iam_service_account.this.id}"
   deletion_protection = false
-  depends_on = yandex_resourcemanager_folder_iam_binding.this
+  depends_on = [
+    yandex_resourcemanager_folder_iam_binding.this,
+  ]
   instance_template {
     platform_id = "standard-v1"
     resources {
