@@ -2,7 +2,7 @@ resource "yandex_compute_instance_group" "this" {
   name                = "nginx-ig"
   folder_id           = "b1g9uka7gvk8bkh2s9ae"
   service_account_id  = "${yandex_iam_service_account.this.id}"
-  deletion_protection = true
+  deletion_protection = false
   instance_template {
     platform_id = "standard-v1"
     resources {
