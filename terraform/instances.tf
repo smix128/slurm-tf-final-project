@@ -4,7 +4,7 @@ resource "yandex_compute_image" "this" {
 
 resource "yandex_compute_instance_group" "this" {
   name                = "nginx-ig"
-  folder_id           = "${var.YC_FOLDER_ID}"
+  folder_id           = "b1g9uka7gvk8bkh2s9ae"
   service_account_id  = "${yandex_iam_service_account.this.id}"
   deletion_protection = true
   instance_template {
