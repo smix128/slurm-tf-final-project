@@ -5,6 +5,7 @@ resource "yandex_compute_instance_group" "this" {
   deletion_protection = false
   depends_on = [
     yandex_resourcemanager_folder_iam_binding.this,
+    yandex_vpc_subnet.this
   ]
   instance_template {
     platform_id = "standard-v1"
