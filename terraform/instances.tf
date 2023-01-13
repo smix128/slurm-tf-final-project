@@ -35,6 +35,10 @@ resource "yandex_compute_instance_group" "this" {
     }
   }
 
+    allocation_policy {
+      zones = ["ru-central1-a"]
+    }
+
   scale_policy {
     fixed_scale {
       size = 2
