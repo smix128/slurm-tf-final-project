@@ -13,7 +13,7 @@ resource "yandex_compute_instance_group" "this" {
       mode = "READ_WRITE"
       initialize_params {
         image_id = "fd8m4a88dc3vgo2sofh5"
-        size     = 4
+        size     = 10
       }
     }
     metadata = {
