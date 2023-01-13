@@ -27,3 +27,7 @@ variable "yc_folder_id" {
 variable "yc_image_id" {
   type = string
 }
+
+variable "scale" {
+  type = number
+}
