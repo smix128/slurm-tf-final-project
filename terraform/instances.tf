@@ -23,6 +23,11 @@ resource "yandex_compute_instance_group" "this" {
     metadata = {
       ssh-keys = "yc-user:${file("~/.ssh/id_rsa.pub")}"
     }
+
+    network_interface {
+      
+    }
+
     network_settings {
       type = "STANDARD"
     }
