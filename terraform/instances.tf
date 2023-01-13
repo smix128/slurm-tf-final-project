@@ -28,12 +28,16 @@ resource "yandex_compute_instance_group" "this" {
 
     network_interface {
       network_id = yandex_vpc_network.this.id
-      nat = true
+      nat = false
     }
 
     network_settings {
       type = "STANDARD"
     }
+  }
+
+  application_load_balancer {
+    
   }
 
   allocation_policy {
