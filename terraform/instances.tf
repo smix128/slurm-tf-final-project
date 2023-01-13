@@ -39,10 +39,6 @@ resource "yandex_compute_instance_group" "this" {
     }
   }
 
-  allocation_policy {
-    zones = ["ru-central1-a"]
-  }
-
   deploy_policy {
     max_unavailable = 2
     max_creating    = 2
