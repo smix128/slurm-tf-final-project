@@ -12,7 +12,7 @@ source "yandex" "nginx" {
   image_name          = "nginx-${var.image_tag}"
   subnet_id           = "e9b59oe9ppsptmu7n39m"
   disk_type           = "network-hdd"
-  zone                = "enpbeno0scckjlt8jaa9"
+  zone                = "ru-central1-a"
 }
 
 build {
