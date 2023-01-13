@@ -1,3 +1,8 @@
+variable "YC_FOLDER_ID" {
+  type = string
+  default = env("YC_FOLDER_ID")
+}
+
 variable "az" {
   type = list(string)
   default = [
