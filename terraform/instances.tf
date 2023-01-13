@@ -21,7 +21,7 @@ resource "yandex_compute_instance_group" "this" {
     }
 
     network_interface {
-      network_id = yandex_vpc_network.this
+      network_id = yandex_vpc_network.this.id
     }
 
     network_settings {
