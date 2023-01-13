@@ -3,7 +3,7 @@ resource "yandex_iam_service_account" "this" {
  }
 
  resource "yandex_resourcemanager_folder_iam_binding" "this" {
-  folder_id   = "${var.YC_FOLDER_ID}"
+  folder_id   = "${env(YC_FOLDER_ID)}"
   role        = "editor"
   members     = [
     "serviceAccount:${yandex_iam_service_account.this.id}",
