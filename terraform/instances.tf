@@ -1,4 +1,4 @@
-resource "yandex_compute_image" "this" {
+resource "yandex_compute_image" "nginx-1" {
   name       = "nginx-1"
 }
 
@@ -25,7 +25,7 @@ resource "yandex_compute_instance_group" "this" {
     }
 
     network_interface {
-      
+
     }
 
     network_settings {
