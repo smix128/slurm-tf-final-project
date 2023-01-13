@@ -6,7 +6,7 @@ resource "yandex_alb_backend_group" "this" {
     weight                 = 1
     port                   = 80
     target_group_ids       = [
-      yandex_alb_target_group.nginx-target-group.id
+      data.yandex_compute_instance_group.application_load_balancer.nginx-target-group
     ]
     load_balancing_config {
       panic_threshold      = 90
