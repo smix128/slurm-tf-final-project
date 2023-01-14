@@ -1,5 +1,5 @@
 resource "yandex_compute_instance_group" "this" {
-  name                = "${var.ig_name}"
+  name                = "instance-group"
   folder_id           = "${var.yc_folder_id}"
   service_account_id  = "${yandex_iam_service_account.this.id}"
   deletion_protection = false

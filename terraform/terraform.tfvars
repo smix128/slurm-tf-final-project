@@ -1,9 +1,3 @@
-ig_name = "nginx-ig"
-
-yc_folder_id = "b1g9uka7gvk8bkh2s9ae"
-
-yc_image_id = "fd84ou4ipf7nfvs4t3r8"
-
 scale = 3
 
 cidr_blocks = [

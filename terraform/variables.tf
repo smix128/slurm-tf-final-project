@@ -6,10 +6,6 @@ variable "cidr_blocks" {
   type = list(list(string))
 }
 
-variable "ig_name" {
-  type = string
-}
-
 variable "yc_folder_id" {
   type = string
 }
