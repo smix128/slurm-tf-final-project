@@ -51,7 +51,7 @@ resource "yandex_alb_load_balancer" "this" {
   allocation_policy {
     location {
       zone_id   = var.az[0]
-      subnet_id = yandex_vpc_subnet.this[index(var.az, var.az[0])].id
+      subnet_id = yandex_vpc_subnet.this[var.az[0]].id
     }
   }
 
