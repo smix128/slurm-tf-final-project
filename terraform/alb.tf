@@ -62,7 +62,7 @@ resource "yandex_alb_load_balancer" "this" {
         external_ipv4_address {
         }
       }
-      ports = [ 9000 ]
+      ports = [ 80 ]
     }
     http {
       handler {
