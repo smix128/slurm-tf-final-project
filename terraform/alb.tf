@@ -39,4 +39,32 @@ resource "yandex_alb_virtual_host" "this" {
       }
     }
   }
-}    
+}
+
+resource "yandex_alb_load_balancer" "this" {
+  name        = "alb-load-balancer"
+  network_id  = yandex_vpc_network.this.id
+
+  allocation_policy {
+    location {
+      zone_id   = "ru-central1-a"
+      subnet_id = "subnet-ru-central1-a" 
+    }
+  }
+
+  listener {
+    name = "nginx-listener"
+    endpoint {
+      address {
+        external_ipv4_address {
+        }
+      }
+      ports = [ 9000 ]
+    }
+    http {
+      handler {
+        http_router_id = yandex_alb_http_router.this.id
+      }
+    }
+  }
+}
