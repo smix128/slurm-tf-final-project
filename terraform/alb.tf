@@ -44,9 +44,6 @@ resource "yandex_alb_virtual_host" "this" {
 resource "yandex_alb_load_balancer" "this" {
   name        = "alb-load-balancer"
   network_id  = yandex_vpc_network.this.id
-  depends_on = [
-    yandex_vpc_subnet.this
-  ]
 
   allocation_policy {
     location {
