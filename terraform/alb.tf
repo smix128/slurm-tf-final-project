@@ -68,3 +68,7 @@ resource "yandex_alb_load_balancer" "this" {
     }
   }
 }
+
+output "real balancer ip" {
+  value = tolist(tolist(tolist(tolist(yandex_lb_network_load_balancer.this.listener).0.endpoint).0.address).0.external_ipv4_address).0.address
+}
