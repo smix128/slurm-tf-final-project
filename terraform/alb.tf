@@ -22,3 +22,21 @@ resource "yandex_alb_backend_group" "this" {
     }
   }
 }
+
+resource "yandex_alb_http_router" "this" {
+  name   = "alb-http-router"
+}
+
+resource "yandex_alb_virtual_host" "this" {
+  name           = "alb-virtual-host"
+  http_router_id = yandex_alb_http_router.this.id
+  route {
+    name = "nginx-route"
+    http_route {
+      http_route_action {
+        backend_group_id = yandex_alb_backend_group.this.id
+        timeout          = "3s"
+      }
+    }
+  }
+}    
